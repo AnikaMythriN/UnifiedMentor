@@ -1,0 +1,161 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+header {
+  background: #2c3e50;
+  padding: 1em;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+.gallery-section {
+  padding: 2em;
+  background: #fff;
+}
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.art-card {
+  width: 300px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.art-card:hover {
+  transform: scale(1.05);
+}
+.art-card img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+.art-card p {
+  text-align: center;
+  margin: 0.5em 0;
+}
+#about {
+  padding: 2em;
+  background: #ecf0f1;
+  text-align: center;
+}
+footer {
+  background: #2c3e50;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.9);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #ccc;
+  font-size: 20px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  padding: 0.8em;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #1a252f;
+}
+
+/* Dark Mode Support */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #eee;
+}
+body.dark-mode header,
+body.dark-mode footer {
+  background: #111;
+}
+body.dark-mode nav a {
+  color: #ccc;
+}
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 10px;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+.modal-content.zoomed {
+  transform: scale(1.8);
+  cursor: zoom-out;
+}
+
+

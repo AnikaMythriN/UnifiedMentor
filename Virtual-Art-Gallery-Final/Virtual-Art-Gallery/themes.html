@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery Themes</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .theme-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .theme-card:hover {
+      transform: translateY(-5px);
+    }
+    .theme-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .theme-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    .theme-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    body.dark-mode .theme-card {
+      background: #2a2a2a;
+      color: #eee;
+    }
+    body.dark-mode .theme-card p {
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gallery Themes</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <button onclick="toggleTheme()" style="padding: 0.4em 1em; border-radius: 5px;">Toggle Theme</button>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery-section">
+    <h2 style="text-align: center;">Explore Different Art Styles</h2>
+    <div class="themes-grid">
+      <div class="theme-card">
+        <img src="images/modern1.jpg" alt="Modern Art">
+        <h3>Modern Art</h3>
+        <p>Bold, abstract, and innovative creations reflecting modern expressions.</p>
+      </div>
+      <div class="theme-card">
+        <img src="images/classical1.jpg" alt="Classical Art">
+        <h3>Classical Art</h3>
+        <p>Timeless masterpieces from historical periods like the Renaissance.</p>
+      </div>
+      <div class="theme-card">
+        <img src="images/photography1.jpg" alt="Photography">
+        <h3>Photography</h3>
+        <p>Visual storytelling through stunning real-life captures and scenes.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Virtual Art Gallery | Themed Art Categories</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

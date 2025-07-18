@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtual Art Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Virtual Art Gallery</h1>
+    <nav>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+    <button onclick="playMusic()">🔊 Play Music</button>
+      <ul>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="themes.html">Themes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="gallery" class="gallery-section">
+    <input type="text" id="searchInput" onkeyup="searchArtworks()" placeholder="Search artworks..." style="padding: 0.5em; width: 300px; margin: 1em auto; display: block; border-radius: 8px; border: 1px solid #ccc;">
+    <div class="gallery-container">
+      <div class="art-card" onclick="openModal('art1')">
+        <img src="images/modern1.jpg" alt="Artwork 1" />
+        <p>Abstract Thoughts</p>
+      </div>
+      <div class="art-card" onclick="openModal('art2')">
+        <img src="images/modern2.jpg" alt="Artwork 2" />
+        <p>Surreal Vision</p>
+      </div>
+      <div class="art-card" onclick="openModal('art3')">
+        <img src="images/modern3.jpg" alt="Artwork 3" />
+        <p>Color Harmony</p>
+      </div>
+    
+      <div class="art-card" onclick="openModal('art4')">
+        <img src="images/modern4.jpg" alt="Digital Dreams" />
+        <p>Digital Dreams</p>
+      </div>
+      <div class="art-card" onclick="openModal('art5')">
+        <img src="images/modern5.jpg" alt="Neon Lights" />
+        <p>Neon Lights</p>
+      </div>
+      <div class="art-card" onclick="openModal('art6')">
+        <img src="images/classical1.jpg" alt="Mona Lisa" />
+        <p>Mona Lisa</p>
+      </div>
+      <div class="art-card" onclick="openModal('art7')">
+        <img src="images/classical2.jpg" alt="Starry Night" />
+        <p>Starry Night</p>
+      </div>
+      <div class="art-card" onclick="openModal('art8')">
+        <img src="images/photography1.jpg" alt="Sunset Boulevard" />
+        <p>Sunset Boulevard</p>
+      </div>
+      <div class="art-card" onclick="openModal('art9')">
+        <img src="images/photography2.jpg" alt="Urban Jungle" />
+        <p>Urban Jungle</p>
+      </div></div>
+  </section>
+
+  <section id="about">
+    <h2>About This Gallery</h2>
+    <p>Welcome to our immersive Virtual Art Gallery. Explore modern art in a responsive and interactive web environment. Click on any artwork to view details, zoom in, and enjoy background music for a relaxing experience.</p>
+  </section>
+
+  <div id="artModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="caption"></div>
+  </div>
+
+  <audio id="bgMusic" src="assets/music.mp3" loop></audio>
+
+  <footer>
+    <p>&copy; 2025 Virtual Art Gallery | Designed with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
