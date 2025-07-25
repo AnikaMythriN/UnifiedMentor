@@ -23,8 +23,4 @@ An interactive and modern virtual art gallery website where users can explore ar
 - `/images` - artwork images  
 - `/music` - background music
 
-## 📌 How to Use
 
-1. **Download or Clone** this repo:
-   ```bash
-   git clone https://github.com/your-username/Virtual-Art-Gallery-Final.git
